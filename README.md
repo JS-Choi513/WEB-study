@@ -62,3 +62,19 @@ style 태그는 선택자를 사용해서 디자인을 변경할 수 있다. 선
 
 속성은 태그안에서 직접 지정해서 선택자가 필요없ㄱ음 
 
+    <style>
+        a/*태그선택자*/ {
+            color:black; /*선언*/
+            text-decoration:none; /*웹페이지에 대한 모든 a 태그에 대해 모든 디자인을 제거*/
+        }
+        .saw/*클래스 선택자*/ {
+            color:black; /*선언*/
+            text-decoration:none; /*웹페이지에 대한 모든 a 태그에 대해 모든 디자인을 제거*/
+        }
+        </style>
+
+        #active/*id 선택자*/ {
+            color:black; /*선언*/
+            text-decoration:none; /*웹페이지에 대한 모든 a 태그에 대해 모든 디자인을 제거*/
+        }
+
