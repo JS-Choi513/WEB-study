@@ -77,4 +77,10 @@ style 태그는 선택자를 사용해서 디자인을 변경할 수 있다. 선
             color:black; /*선언*/
             text-decoration:none; /*웹페이지에 대한 모든 a 태그에 대해 모든 디자인을 제거*/
         }
+CSS 에서 display 속성은 해당요소를 어떻게 보여줄지 결정한다. 
+주로 4가지 속성값이 쓰이는데 태그마다 기본값이 다르다. 
 
+none 요소를 보이지 않도록 설정 블럭도 안잡아 먹음 
+block
+inline
+inline-block

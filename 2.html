@@ -4,29 +4,62 @@
         <title>CSS</title>
         <meta charset = "utf-8">
         <style>
-            
+            body{
+                margin:0;
+            }
             #active{ /*id 선택자 가장 우선순위가 높다 유일무이한 고유명사 웹페이지에서 한번이상 쓸수 없음*/
                 color:red;
             }
             .saw { /*클래스 선택자*/
                 color:gray;
             }
+            h1{    
+                font-size: 45px;
+                text-align:center;
+                border-bottom:1px solid gray;
+                margin:0;
+                padding:20px;
+            }
+            ol{
+                border-right:1px 
+                solid gray;
+                width:100px;
+                margin:0;
+                padding:20px;
+            }
+            #grid{
+                display:grid; /*웹페이지에 그리드를 사용할 떄 먼저 선언한다. */
+                grid-template-columns: 150px 1fr; /*한 행에 gird라는 id 안에있는 태그들을 표시, 한칸은 150, 한칸*/
+                                            /*1fr은 1/남은공간 만큼 공간차지 한다.  */
+            }
+            #grid ol{
+                padding-left:33px;
+            }
+            #article{
+                padding-left:25px;
+            }
+
+            
 
         </style>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
-        <ol>
-            <li><a href = "1.html" class="saw">HTML</a></li>
-            <li><a href = "2.html" class="saw" id="active">CSS</a></li>
-            <li><a href = "3.html">JavaScript</a></li>
-        </ol>
-        <h2>CSS</h2>
-        <p style = "margin-top:45;">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.
-        Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,
-        the language can be applied to any XML document, including plain XML, SVG and XUL,
-        and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript,
-        CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.</p>
+        <div id="grid">
+            <ol>
+                <li><a href = "1.html" class="saw">HTML</a></li>
+                <li><a href = "2.html" class="saw" id="active">CSS</a></li>
+                <li><a href = "3.html">JavaScript</a></li>
+            </ol>
+            <div id="article">
+            <h2>CSS</h2>
+            <p style = "margin-top:45;">Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language.
+            Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,
+            the language can be applied to any XML document, including plain XML, SVG and XUL,
+            and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript,
+            CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.</p>
+            </div>    
+        </div>
     </body>
 
 

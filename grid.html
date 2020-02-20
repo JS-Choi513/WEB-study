@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title></title>
+    <head>
+        <style>
+            div{
+                border:5px solid gray;
+                display:grid;
+            }
+            #grid{
+                border:5px solid pink;
+                display:grid;
+                grid-template-columns: 1fr 1fr; 
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="grid">
+            <div>NAVIGATION</div>
+            <div>ARTICLE</div>
+        </div>
+    </body>
+</html>
+
+<!-- div태그는 cSS를 사용할 때 선택자를 사용하기 위해 의미가 없는 태그로 묶어줄 때 쓰는 태그이다
+    기본적으로 block level element태그이기 때문에 줄 전체를 쓴다.
+    <span> 태그도 같은기능이지만  in-line element 이다. 
+        <div>
+            <div>NAVIGATION</div>
+            <div>ARTICLE</div>
+
+                display:grid; // 텍스트 양이 늘어남에 따라 블록을 확장 
+                grid-template-columns: 150px 1fr; //하나의 행에 표시  2번째 열을 나머지 공간에 할당한다(1fr)
+                fr 은 display 할 요소의 공간을 분배
+        </div>
+--> 
