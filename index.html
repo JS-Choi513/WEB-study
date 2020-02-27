@@ -8,7 +8,61 @@
 </head>
 <body>
     
-    <h1><a href="index.html"> WEB</a></h1>
+    <h1><a href="index.html"> WEB</a></h1>  
+    <input id="night_day" type="button" value="night" style = "color:green;" onclick="
+
+        
+    /*  
+       #뇌피셜 
+        if(document.querySelector('body').style.backgroundColor === 'powderblue')
+        {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color = 'blue';
+        } 
+        else
+        {
+            document.querySelector('body').style.backgroundColor = 'powderblue';
+            document.querySelector('body').style.color = 'black';
+        }*/
+        
+        /*
+       #예제
+        if(document.querySelector('#night_day').value === 'night')
+            {
+                document.querySelector('body').style.backgroundColor = 'powderblue';
+                document.querySelector('body').style.color = 'blue';
+                document.querySelector('#night_day').value = 'day';
+                
+            }   
+        else
+            {
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                document.querySelector('#night_day').value = 'night';
+
+            }*/
+        // 리팩토리 개선안 
+        // 좋은 프로그램= 유지보수 용이, 중복 제거
+        var target = document.querySelector('body');
+        
+        if(this.value === 'night')//속해있는 태그 안의 데이터를 불러 올 때는 .this 를 쓰면 된다
+            {
+                target.style.backgroundColor = 'powderblue';
+                target.style.color = 'blue';
+                this.value = 'day';
+            }
+            else
+            {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                this.value = 'night';
+
+            }
+        ">
+        
+     
+    
+
     <div id="grid">
     <ol>
         <li><a href="1.html">HTML</a></li>
