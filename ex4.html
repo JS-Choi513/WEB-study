@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title<></title>
+    </head>
+    <body>
+        <h1>Function</h1>
+        <h2>Basic</h2>
+        <ul>
+            <script>
+                function two()
+                {
+                document.write('<li>2-2</li>');
+                document.write('<li>2-1</li>');
+                }
+                document.write('<li>1</li>');
+                two();
+                document.write('<li>3</li>');
+                two();
+
+
+            </script>
+        </ul>
+        <!-- 함수는 매개변수와 인자로 구성되어 있고 출력값으로 값을 반환하는데 'return' 이라고 한다.  -->
+        <h2>Parameter & Argument</h2>
+            <script>
+                document.write(1+1+'<br>');
+                function onePlusone()
+                    {
+                        document.write(1+1+'<br>');
+                    }
+                onePlusone();
+                
+                // 두 숫자의 합을 구하는 함수 # 기존에 알고있던 방법(정수형변수 선언, 수식, 출력)
+                function sum(num1,num2)
+                    {
+                        var num1, num2, sum = 0;
+                        sum = num1+num2;
+                        document.write(sum+'<br>');
+
+                    }     
+                sum(2,3);// 함수로 전달하는 이 값을 'argument' 인자라고 한다. 
+
+                // 놀랍고 새롭고 효율적인 방법 
+                function sum1(num1,num2)// 함수안으로 인자를 전달하는 역할을 하는 이 값을 'parameter' 매개변수라고 한다
+                    {
+                        document.write('<div style = "color:red">'+(num1+num2)+'</div><br>');//따로 변수선언없이 한줄에 가능하다. 태그도 넣을 수 있다. 
+                    }// num1+num2 에 괄호를 하지 않으면 '+' 를 문자결합 연산자로 인식하기 때문에 
+                     //   23(붉은글씨)로 인식한다. 
+                     //한줄로 표현하는것이 간결하긴 하지만 다양한 정보를 포함하고 있기 때문에 다양하게 사용할 수 없다. 
+                sum1(2,3);
+            </script>
+        <h2>Return</h2>
+            <script>
+                function sum2(num1,num2)
+                    {
+                        return num1+num2;// 연산결과를 반환함으로써 다양하게 사용할 수 있다. 
+                    }
+                document.write(sum2(2,3)+'<br>');
+                document.write('<div style = "color:red">'+sum2(2,3)+'</div><br>');
+                document.write('<div style = "font-size:3rem">'+sum2(2,3)+'</div><br>');
+            </script>
+
+    </body>
+</html>

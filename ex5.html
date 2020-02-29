@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Creat</h2>
+        <script>
+            var coworkers = {
+                "programmer":"egoing",//coworkers 라는 객체에 프로그래머라는 딱지를 붙여서 egoing 이라는 정보를 저장        
+                "designer":"leezche"
+            };        
+            document.write("programmer: "+coworkers.programmer+"<br>");
+            document.write("designer: "+coworkers.designer+"<br>");
+            coworkers.bookeeper = "daru";
+            document.write("bookeeper: "+coworkers.bookeeper+"<br>");
+            coworkers["data scientist"] = "teaho";
+            document.write("data scientist: "+ coworkers["data scientist"]+"<br>");
+        </script>
+        객체 : 이름이있는 정리상자 
+        document.write("programmer: "+cowerkers.programmer);
+        이 코드에서 '.' 을 object access operator 라고 한다. 
+        배열은 순서가 있지만 객체는 순서가 없이 저장된다. 
+
+        <h2>Iterate</h2>
+            <script>
+                for(var key in coworkers){// 객체에 있는 키값(원하는 정보에 도달할 수 있는열쇠(딱지) )을 가져오는 반복문 
+                    //데이터의 수 만큼 반복 
+                    document.write(key+'<br>');//coworkers 객체안의 모든 정보를 나열 순서 x
+                    document.write(coworkers[key]+'<br>');
+                    document.write(key+": "+coworkers[key]+"<br>");
+                }
+            </script>
+
+
+            <h2>Porperty & Method </h2>
+            <script>
+                coworkers.showAll = function()//객체에는 함수도 저장 가능하다.
+                {
+                    for(var key in this){
+                        document.write(key+": "+this[key]+"<br>");
+                        // 함수가 소속된 객체의 이름이 바뀌어도 this 를 이용하면 가능하다. 
+                        // 객체에 소속된 함수를 메서드 라고 한다. 
+                        // 객체 변수를 프로퍼티 라고 한다. 
+                    }
+                }
+                coworkers.showAll();
+            </script>
+        
+
+    </body>
+</html>
